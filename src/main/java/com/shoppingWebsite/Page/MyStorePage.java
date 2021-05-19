@@ -94,6 +94,6 @@ public class MyStorePage extends BaseClass {
 
 		addToCart();
 
-	return	clickOnProceedToCheckout();
+		return clickOnProceedToCheckout();
 	}
 }

@@ -11,7 +11,6 @@ import com.shoppingWebsite.Base.BaseClass;
 public class DeleteItemPage extends BaseClass {
 	@FindBy(css = ".icon-trash")
 	WebElement DeleteButton;
-	
 
 	public DeleteItemPage() {
 

@@ -12,23 +12,23 @@ import com.shoppingWebsite.Base.BaseClass;
 import com.shoppingWebsite.Page.IndexPage;
 
 public class IndexPageTest extends BaseClass {
-	IndexPage indexpage ;
-	
+	IndexPage indexpage;
+
 	@BeforeMethod
 	public void beforeMethod() {
 		intialisation();
-		indexpage= new IndexPage();
-		
+		indexpage = new IndexPage();
+
 	}
+
 	@Test
-public void SignInTest() {
+	public void SignInTest() {
 		indexpage.clickSignInButton();
-	
-}
-	
-	
-@AfterMethod
-public void afterTest() {
-	driver.quit();
-}
+
+	}
+
+	@AfterMethod
+	public void afterTest() {
+		driver.quit();
+	}
 }

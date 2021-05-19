@@ -10,12 +10,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import com.shoppingWebsite.Base.BaseClass;
+
 public class Utils extends BaseClass {
 
-	
-	public static long PAGE_LOAD_TIMEOUT=20;
-	public static long IMPLICIT_WAIT=20;
-	
+	public static long PAGE_LOAD_TIMEOUT = 20;
+	public static long IMPLICIT_WAIT = 20;
+
 	public static void takeFailedTestCasesScreenShot(String testMethodName) {
 
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
@@ -24,9 +24,9 @@ public class Utils extends BaseClass {
 
 		try {
 			FileUtils.copyFile(screenshotFile,
-					new File("./FailedTestsScreenShotFolder\\"  + testMethodName + "_" + timeStamp+".jpg"));
+					new File("./FailedTestsScreenShotFolder\\" + testMethodName + "_" + timeStamp + ".jpg"));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 

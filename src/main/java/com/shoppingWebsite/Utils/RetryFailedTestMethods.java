@@ -7,7 +7,7 @@ import com.shoppingWebsite.Base.BaseClass;
 
 public class RetryFailedTestMethods extends BaseClass implements IRetryAnalyzer {
 	int counter;
-	int maxCounter=2;
+	int maxCounter = 2;
 
 	@Override
 	public boolean retry(ITestResult result) {

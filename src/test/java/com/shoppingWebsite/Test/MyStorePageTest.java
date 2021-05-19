@@ -29,7 +29,7 @@ public class MyStorePageTest extends BaseClass {
 	@Test
 	public void AddTshirtToCart() {
 		mystorepage.selectTshirt();
-	
+
 	}
 
 	@AfterMethod

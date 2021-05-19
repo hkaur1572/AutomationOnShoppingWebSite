@@ -9,25 +9,27 @@ import com.shoppingWebsite.Base.BaseClass;
 import com.shoppingWebsite.Page.IndexPage;
 import com.shoppingWebsite.Page.LoginPage;
 
-public class LoginPageTest  extends BaseClass{
-	IndexPage indexpage ;
+public class LoginPageTest extends BaseClass {
+	IndexPage indexpage;
 	LoginPage loginpage;
-	
+
 	@BeforeMethod
 	public void beforeMethod() {
 		intialisation();
 		indexpage = new IndexPage();
 		indexpage.clickSignInButton();
-		loginpage=new LoginPage();
+		loginpage = new LoginPage();
 	}
+
 	@Test
-	 public void signIn() {
-		 
-		 loginpage.configuration();
-	 }
+	public void signIn() {
+
+		loginpage.configuration();
+	}
+
 	@AfterMethod
 	public void afterMethod() {
-	driver.quit();
-		
+		driver.quit();
+
 	}
 }

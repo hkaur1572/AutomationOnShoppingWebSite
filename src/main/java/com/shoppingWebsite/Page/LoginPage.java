@@ -8,38 +8,40 @@ import com.shoppingWebsite.Base.BaseClass;
 
 public class LoginPage extends BaseClass {
 
-	@FindBy(id="email")
+	@FindBy(id = "email")
 	WebElement inputEmail;
-	
-	@FindBy(id="passwd")
+
+	@FindBy(id = "passwd")
 	WebElement inputPassword;
-	
-	@FindBy(id="SubmitLogin")
+
+	@FindBy(id = "SubmitLogin")
 	WebElement signButton;
-	
-	
-	public LoginPage (){
+
+	public LoginPage() {
 		waitForDocumentCompleteState(10);
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	public void enterEmailId() {
-		
+
 		inputEmail.sendKeys(prop.getProperty("emailid"));
 	}
+
 	public void enterPassword() {
-		
+
 		inputPassword.sendKeys(prop.getProperty("password"));
 	}
+
 	public MyStorePage clickSignInButton() {
 		signButton.click();
 		return new MyStorePage();
 	}
+
 	public MyStorePage configuration() {
-		
+
 		enterEmailId();
 		enterPassword();
 		return clickSignInButton();
 	}
-	
+
 }

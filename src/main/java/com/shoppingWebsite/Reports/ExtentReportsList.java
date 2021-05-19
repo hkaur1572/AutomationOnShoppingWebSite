@@ -27,7 +27,7 @@ public class ExtentReportsList extends TestListenerAdapter {
 	public void onStart(ITestContext testContext) {
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		String reportName = "Extent Report---" + timeStamp + ".html";
-	
+
 		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/Extent-Reports/" + reportName);
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/extent-config.xml");
 		extentReports = new ExtentReports();

@@ -40,12 +40,12 @@ public class ShoppingCartTest extends BaseClass {
 		shoppingcartpage = new ShoppingCartPage();
 
 		shoppingcartpage.checkout();
-		
+
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-	driver.quit();
+		driver.quit();
 
 	}
 }

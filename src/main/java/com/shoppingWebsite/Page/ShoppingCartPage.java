@@ -41,15 +41,13 @@ public class ShoppingCartPage extends BaseClass {
 
 	@FindBy(css = "a[title='Pay by bank wire']")
 	WebElement PaymentMethod;
-	
-	
 
 	@FindBy(css = "button[class='button btn btn-default button-medium'][type='submit']")
 	WebElement ConfirmOrder;
-	
+
 	@FindBy(css = "div[class='box']")
 	WebElement ConfirmationMessage;
-	
+
 	public ShoppingCartPage() {
 
 		waitForDocumentCompleteState(10);
@@ -99,18 +97,17 @@ public class ShoppingCartPage extends BaseClass {
 	public void clickOnPaymentButton() {
 		PaymentMethod.click();
 	}
+
 	public void clickOnConfirmMyOrderButton() {
 		ConfirmOrder.click();
-		
-		
-		
+
 	}
+
 	public void getConfirmationMessage() {
-	logger.info("Confirmation Message "+ConfirmationMessage.getText());
-		
-		
-		
+		logger.info("Confirmation Message " + ConfirmationMessage.getText());
+
 	}
+
 	public void checkout() {
 		getTotalPrice();
 		clickOnProceedToCheckOutButton();
@@ -122,7 +119,7 @@ public class ShoppingCartPage extends BaseClass {
 		clickOnTermsAndService();
 		clickOnShippingProcess();
 		clickOnPaymentButton();
-	clickOnConfirmMyOrderButton();
-	getConfirmationMessage();
+		clickOnConfirmMyOrderButton();
+		getConfirmationMessage();
 	}
 }

@@ -10,18 +10,18 @@ public class CustomeListener extends BaseClass implements ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		logger.info("Test Starts"+ result.getMethod().getMethodName());
-	
+		logger.info("Test Starts" + result.getMethod().getMethodName());
+
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-logger.info("Test Passed"+ result.getMethod().getMethodName());
+		logger.info("Test Passed" + result.getMethod().getMethodName());
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		logger.info("Test Failed"+ result.getMethod().getMethodName()+"Take Screen Shot!!!!!");
+		logger.info("Test Failed" + result.getMethod().getMethodName() + "Take Screen Shot!!!!!");
 		Utils.takeFailedTestCasesScreenShot(result.getTestName());
 	}
 
@@ -32,7 +32,6 @@ logger.info("Test Passed"+ result.getMethod().getMethodName());
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		
 
 	}
 
